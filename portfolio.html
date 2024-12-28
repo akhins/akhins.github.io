@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hakkımda - Akın ŞENGEZER</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Poppins:wght@300;400;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+    
+        body {
+            background-color: #0a192f;
+            color: #8892b0;
+            line-height: 1.6;
+        }
+    
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+    
+        header {
+            padding: 100px 0;
+            text-align: center;
+        }
+    
+        h1 {
+            font-family: 'Fira Code', monospace;
+            color: #64ffda;
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+    
+        h1:hover {
+            text-shadow: 0 0 15px rgba(100, 255, 218, 0.8);
+            letter-spacing: 2px;
+        }
+    
+        h2, h3 {
+            text-align: center;
+        }
+    
+        p {
+            text-align: center;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 1.1rem;
+            color: #64ffda;
+            letter-spacing: 0.5px;
+            text-shadow: 0 0 5px rgba(100, 255, 218, 0.3);
+            transition: all 0.3s ease;
+        }
+        .title-with-arrows {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            color: #64ffda;
+            font-family: 'Share Tech Mono', monospace;
+            transition: all 0.3s ease;
+        }
+    
+        .arrow {
+            color: #64ffda;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+    
+        .title-with-arrows:hover .arrow {
+            transform: scale(1.2);
+            text-shadow: 0 0 10px rgba(100, 255, 218, 0.6);
+        }
+    
+    
+        p:hover {
+            transform: translateY(-2px);
+            text-shadow: 0 0 10px rgba(100, 255, 218, 0.6);
+            letter-spacing: 1px;
+        }
+    
+        section {
+            padding: 80px 0;
+            border-bottom: 1px solid #233554;
+        }
+    
+        .section-title {
+            font-family: 'Fira Code', monospace;
+            color: #ccd6f6;
+            font-size: 2rem;
+            margin-bottom: 40px;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            display: inline-block;
+        }
+    
+        .section-title:hover {
+            color: #64ffda;
+            transform: translateY(-3px);
+        }
+    
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 50%;
+            background-color: #64ffda;
+            transition: all 0.3s ease;
+        }
+    
+        .section-title:hover::after {
+            width: 100%;
+            left: 0;
+        }
+    
+        .about-me {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            text-align: center;
+        }
+    
+        .profile-image {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #64ffda;
+            box-shadow: 0 0 15px rgba(100, 255, 218, 0.3);
+            display: block;
+            margin: 0 auto;
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+        }
+    
+        .profile-image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px rgba(100, 255, 218, 0.5);
+            border-width: 5px;
+        }
+    
+        .experience-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+    
+        .experience-card {
+            background: #112240;
+            padding: 25px;
+            border-radius: 4px;
+            transition: transform 0.3s;
+            text-align: center;
+        }
+    
+        .experience-card:hover {
+            transform: translateY(-5px);
+        }
+    
+        .experience-card ul {
+            list-style-position: inside;
+            text-align: left;
+            padding: 15px;
+            margin: 10px 0;
+        }
+    
+        .experience-card li {
+            margin-bottom: 10px;
+            color: #8892b0;
+            font-family: 'Share Tech Mono', monospace;
+            padding-left: 20px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+    
+        .experience-card li:hover {
+            color: #64ffda;
+            transform: translateX(10px);
+            padding-left: 25px;
+        }
+    
+        .experience-card li::before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: #64ffda;
+            transition: all 0.3s ease;
+        }
+    
+        .experience-card li:hover::before {
+            transform: scale(1.2);
+        }
+    
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+    
+        .project-card {
+            background: #112240;
+            padding: 25px;
+            border-radius: 4px;
+            transition: transform 0.3s;
+            text-align: center;
+        }
+    
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+    
+        .certificates-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            text-align: center;
+        }
+    
+        .hobbies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            text-align: center;
+        }
+    
+        footer {
+            text-align: center;
+            padding: 40px 0;
+        }
+    
+        @media (max-width: 768px) {
+            .about-me {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+<body>
+    <div class="container">
+        <nav style="padding: 20px 0; text-align: center;">
+            <a href="blog.html" style="color: #64ffda; text-decoration: none; margin: 0 15px; font-family: 'Share Tech Mono', monospace;">BLOG</a>
+            <a href="about.html" style="color: #64ffda; text-decoration: none; margin: 0 15px; font-family: 'Share Tech Mono', monospace;">HAKKIMDA</a>
+        </nav>
+        <header>
+            <h1>Akın ŞENGEZER</h1>
+            <div class="title-with-arrows">
+                <span class="arrow">▹</span>
+                <p>Penetration Tester & Secure Code Developer</p>
+                <span class="arrow">◃</span>
+            </div>
+        </header>
+
+        <section id="hakkimda">
+            <h2 class="section-title">Hakkımda</h2>
+            <div class="about-me">
+                <div>
+                    <p>Sızma testi uzmanı ve siber güvenlik araştırmacısıyım. 2020 yılından bu yana siber güvenlik alanında web uygulamaları, kablosuz ağlar, iç
+                        ağlar ve sosyal mühendislik testleri gibi kritik alanlarda derinlemesine bilgi ve deneyim sahibiyim. Siber güvenlik araçlarını etkin bir şekilde
+                        kullanarak, sistemlerin zafiyetlerini tespit etmek ve güvenlik önlemlerini geliştirmek için çalışmaktayım.
+                        Ayrıca, yapay zeka ve veri bilimi alanlarına da ilgi duymaktayım, bu alanlarda sürekli olarak kendimi geliştirmekteyim. Çeşitli CTF (Capture
+                        the Flag) yarışmalarına katılarak, siber güvenlik becerilerimi sınamakta ve yenilikçi çözümler üretmekteyim. İlgi alanlarım arasında
+                        programlama, güvenli yazılım geliştirme ve kripto para teknolojileri yer almakta. Siber güvenlik dünyasındaki en son trendleri ve tehditleri
+                        yakından takip ederek, bu alanda kendimi sürekli olarak geliştirmeye odaklanıyorum.</p>
+                </div>
+                <div>
+                    <img src="C:\Users\akkin\Desktop\1715633664262.jpeg" alt="Profil Fotoğrafı" class="profile-image">
+                </div>
+            </div>
+        </section>
+
+        <section id="deneyim">
+            <h2 class="section-title">Deneyim</h2>
+            <div class="experience-grid">
+                <div class="experience-card">
+                    <h3>Pentest Team Leader</h3>
+                    <p>LastGuard Cyber Security Technology</p>
+                    <p>Eylül 2022 - Ocak 2025</p>
+                    <ul>
+                        <li>Web uygulamalarında OWASP Top 10 ve diğer güvenlik açıklarına yönelik kapsamlı sızma testleri gerçekleştirdim.</li>
+                        <li>Kablosuz ağlar ve şirket içi ağlarda zafiyet taramaları ve sızma testleri yürüttüm</li>
+                        <li>Sosyal mühendislik testleri ile personel güvenlik farkındalığını değerlendirdim</li>
+                        <li>Sistemlerin DoS/DDoS saldırılarına karşı dayanıklılığını test ettim</li>
+                        <li>Yazılım güvenliği için kaynak kod analizleri gerçekleştirdim</li>
+                        <li>Test sonuçlarını detaylı raporlar halinde hazırlayıp sunumlar yaptım ve ekip çalışmalarını koordine ettim</li>
+                    </ul>
+                    <h3>Penetration Tester - Intern</h3>
+                    <p>InfinitumIT</p>
+                    <p>Ocak 2022 - Haziran 2022</p>
+                    <ul>
+                        <li>Web uygulamalarında Web uygulamalarının güvenlik açıklarını belirlemek için sızma testleri yapılması.</li>
+                        <li> Şirket içi ağların güvenlik seviyesini analiz ederek, zafiyetlerinin tespitinin yapılması.
+                        </li>
+                        <li>Test sonuçlarını detaylı raporlar halinde hazırlayıp sunumlar yaptım.</li>
+                </div>
+            </div>
+        </section>
+
+        <section id="yetenekler">
+            <h2 class="section-title">Yeteneklerim</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <span class="skill-name">JavaScript</span>
+                    <div class="skill-bar">
+                        <div class="skill-level" data-level="75"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-name">HTML</span>
+                    <div class="skill-bar">
+                        <div class="skill-level" data-level="65"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-name">CSS</span>
+                    <div class="skill-bar">
+                        <div class="skill-level" data-level="60"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-name">PHP</span>
+                    <div class="skill-bar">
+                        <div class="skill-level" data-level="70"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-name">Python</span>
+                    <div class="skill-bar">
+                        <div class="skill-level" data-level="90"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-name">Linux</span>
+                    <div class="skill-bar">
+                        <div class="skill-level" data-level="90"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-name">Active Directory</span>
+                    <div class="skill-bar">
+                        <div class="skill-level" data-level="45"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-name">Olasılık ve Matematik</span>
+                    <div class="skill-bar">
+                        <div class="skill-level" data-level="75"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-name">Web App. Pentest</span>
+                    <div class="skill-bar">
+                        <div class="skill-level" data-level="90"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-name">Mobile App. Pentest</span>
+                    <div class="skill-bar">
+                        <div class="skill-level" data-level="55"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-name">Network Pentest</span>
+                    <div class="skill-bar">
+                        <div class="skill-level" data-level="65"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-name">Internal Network Pentest</span>
+                    <div class="skill-bar">
+                        <div class="skill-level" data-level="70"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-name">Wireless Network Pentest</span>
+                    <div class="skill-bar">
+                        <div class="skill-level" data-level="75"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-name">Source Code Analysis</span>
+                    <div class="skill-bar">
+                        <div class="skill-level" data-level="40"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <style>
+            .skills-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 20px;
+                padding: 20px;
+            }
+
+            .skill-item {
+                margin-bottom: 15px;
+            }
+
+            .skill-name {
+                display: block;
+                margin-bottom: 5px;
+                font-weight: bold;
+            }
+
+            .skill-bar {
+                width: 100%;
+                height: 20px;
+                background-color: #f0f0f0;
+                border-radius: 10px;
+                overflow: hidden;
+            }
+
+            .skill-level {
+                height: 100%;
+                background-color: #4CAF50;
+                width: 0%;
+                transition: width 0.5s ease-in-out;
+            }
+        </style>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const skillLevels = document.querySelectorAll('.skill-level');
+                skillLevels.forEach(level => {
+                    const percentage = level.getAttribute('data-level');
+                    level.style.width = percentage + '%';
+                });
+            });
+        </script>
+
+        <section id="sertifikalar">
+            <h2 class="section-title">Sertifikalar</h2>
+            <div class="certificates-list">
+                <div>
+                    <h3>
+                        Certified AppSec Pratitioner</h3>
+                    <p>The SecOps Group</p>
+                </div>
+                <div>
+                    <h3>
+                        CompTIA Pentest+</h3>
+                    <p>TryHackMe</p>
+                </div>
+                <div>
+                    <h3>
+                        DoS / DDos Saldırıları Ve Koruma</h3>
+                    <p>BTK Akademi</p>
+                </div>
+                
+                <div>
+                    <h3>
+                        Uygulamalı Sızma Testi </h3>
+                    <p>BTK Akademi</p>
+                </div>
+                <div>
+                    <h3>
+                        H4CK FOR TO CTF </h3>
+                    <p>GDG Elazığ</p>
+                </div>
+                <div>
+                    <h3>
+                        CVE-2024-5625 </h3>
+                    <p>Computer Emergency Response Team of the Republic of Turkey</p>
+                </div>
+                <div>
+                    <h3>
+                        CTF Soru Hazırlayıcı </h3>
+                    <p>Kapsül Teknoloji Platformu</p>
+                </div>
+                    
+        
+            </div>
+        </section>
+
+        <section id="hobilerim">
+            <h2 class="section-title">Hobilerim</h2>
+            <div class="hobbies-grid">
+                <div>
+                    <h3>Hobilerim</h3>
+                    <p>Güvenli Yazılım Geliştirme, CTF, Yapay Zeka, Veri Bilimi, Kripto Para, Teknik - Temel Analiz, Futbol</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div>
+                <a href="mailto:akkinsenngezer@gmail.com">Email</a> |
+                <a href="https://github.com/akhins">GitHub</a> |
+                <a href="https://linkedin.com/in/akin-sengezer">LinkedIn</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
