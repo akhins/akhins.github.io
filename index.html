@@ -293,6 +293,30 @@
                 font-size: 0.9rem;
             }
         }
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        @keyframes blink {
+            50% { border-color: transparent }
+        }
+
+        .typing-text {
+            font-family: 'Share Tech Mono', monospace;
+            color: #64ffda;
+            font-size: 0.9rem;
+            margin: 10px 0 20px;
+            display: inline-block;
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 2px solid #64ffda;
+            width: 0;
+            animation: 
+                typing 2s steps(30, end) forwards,
+                blink 1s step-end infinite;
+        }
     </style>
 </head>
 <body>
@@ -303,7 +327,7 @@
         </nav>
         <header>
             <h1>Akın ŞENGEZER</h1>
-            <p style="font-family: 'Share Tech Mono', monospace; color: #64ffda; font-size: 0.9rem; margin-bottom: 20px; opacity: 0.8;">&#60;&#115;&#99;&#114;&#105;&#112;&#116;&#62;&#97;&#108;&#101;&#114;&#116;&#40;&#100;&#111;&#99;&#117;&#109;&#101;&#110;&#116;&#46;&#99;&#111;&#111;&#107;&#105;&#101;&#41;&#60;&#47;&#115;&#99;&#114;&#105;&#112;&#116;&#62;</p>
+            <p class="typing-text">\input{/etc/passwd}</p>
             <div class="title-with-arrows">
                 <span class="arrow">▹</span>
                 <p>Penetration Tester & Secure Code Developer</p>
