@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Akın ŞENGEZER</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Poppins:wght@300;400;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+    
+        body {
+            background-color: #0a192f;
+            color: #8892b0;
+            line-height: 1.6;
+        }
+    
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        nav {
+            padding: 20px 0;
+            text-align: center;
+            border-bottom: 1px solid #233554;
+        }
+
+        nav a {
+            color: #64ffda;
+            text-decoration: none;
+            margin: 0 15px;
+            font-family: 'Share Tech Mono', monospace;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            text-shadow: 0 0 10px rgba(100, 255, 218, 0.6);
+        }
+
+        header {
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        h1 {
+            font-family: 'Fira Code', monospace;
+            color: #64ffda;
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 40px 0;
+        }
+
+        .blog-card {
+            background: #112240;
+            border-radius: 4px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .blog-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .blog-content {
+            padding: 20px;
+        }
+
+        .blog-title {
+            color: #ccd6f6;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            font-family: 'Fira Code', monospace;
+        }
+
+        .blog-excerpt {
+            color: #8892b0;
+            margin-bottom: 15px;
+        }
+
+        .blog-date {
+            color: #64ffda;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.9rem;
+        }
+
+        .read-more {
+            display: inline-block;
+            color: #64ffda;
+            text-decoration: none;
+            font-family: 'Share Tech Mono', monospace;
+            margin-top: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .read-more:hover {
+            text-shadow: 0 0 10px rgba(100, 255, 218, 0.6);
+            transform: translateX(5px);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            border-top: 1px solid #233554;
+        }
+
+        footer a {
+            color: #64ffda;
+            text-decoration: none;
+            margin: 0 10px;
+            font-family: 'Share Tech Mono', monospace;
+            transition: all 0.3s ease;
+        }
+
+        footer a:hover {
+            text-shadow: 0 0 10px rgba(100, 255, 218, 0.6);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="blog.html">BLOG</a>
+            <a href="about.html">HAKKIMDA</a>
+        </nav>
+
+        <header>
+            <h1>Blog Yazılarım</h1>
+        </header>
+
+        <div class="blog-grid">
+            <!-- Örnek Blog Kartı -->
+            <article class="blog-card">
+                <img src="blog-image1.jpg" alt="Blog Resmi" class="blog-image">
+                <div class="blog-content">
+                    <h2 class="blog-title">Web Uygulamalarında Güvenlik Açıkları</h2>
+                    <p class="blog-excerpt">OWASP Top 10 listesindeki en kritik güvenlik açıklarını ve bunlardan korunma yöntemlerini inceliyoruz...</p>
+                    <span class="blog-date">15 Mart 2024</span>
+                    <a href="#" class="read-more">Devamını Oku ></a>
+                </div>
+            </article>
+
+            <!-- Daha fazla blog kartı ekleyebilirsiniz -->
+        </div>
+
+        <footer>
+            <div>
+                <a href="mailto:akkinsenngezer@gmail.com">Email</a> |
+                <a href="https://github.com/akhins">GitHub</a> |
+                <a href="https://linkedin.com/in/akin-sengezer">LinkedIn</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html> 
