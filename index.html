@@ -78,7 +78,6 @@
             text-shadow: 0 0 10px rgba(100, 255, 218, 0.6);
         }
     
-    
         p:hover {
             transform: translateY(-2px);
             text-shadow: 0 0 10px rgba(100, 255, 218, 0.6);
@@ -235,19 +234,45 @@
         footer {
             text-align: center;
             padding: 40px 0;
+            border-top: 1px solid #233554;
         }
-    
-        @media (max-width: 768px) {
-            .about-me {
-                grid-template-columns: 1fr;
-            }
+
+        footer a {
+            color: #64ffda;
+            text-decoration: none;
+            margin: 0 10px;
+            font-family: 'Share Tech Mono', monospace;
+            transition: all 0.3s ease;
+        }
+
+        footer a:hover {
+            text-shadow: 0 0 10px rgba(100, 255, 218, 0.6);
+        }
+
+        nav {
+            padding: 20px 0;
+            text-align: center;
+            border-bottom: 1px solid #233554;
+        }
+
+        nav a {
+            color: #64ffda;
+            text-decoration: none;
+            margin: 0 15px;
+            font-family: 'Share Tech Mono', monospace;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            text-shadow: 0 0 10px rgba(100, 255, 218, 0.6);
         }
     </style>
+</head>
 <body>
     <div class="container">
-        <nav style="padding: 20px 0; text-align: center;">
-            <a href="blog.html" style="color: #64ffda; text-decoration: none; margin: 0 15px; font-family: 'Share Tech Mono', monospace;">BLOG</a>
-            <a href="portfolio.html" style="color: #64ffda; text-decoration: none; margin: 0 15px; font-family: 'Share Tech Mono', monospace;">HAKKIMDA</a>
+        <nav>
+            <a href="blog.html">BLOG</a>
+            <a href="index.html">HAKKIMDA</a>
         </nav>
         <header>
             <h1>Akın ŞENGEZER</h1>
