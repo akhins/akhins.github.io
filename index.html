@@ -317,6 +317,68 @@
                 typing 2s steps(30, end) forwards,
                 blink 1s step-end infinite;
         }
+
+        .terminal-container {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 300px;
+            background: #0d1117;
+            border: 1px solid #64ffda;
+            border-radius: 5px;
+            padding: 15px;
+            font-family: 'Share Tech Mono', monospace;
+            color: #64ffda;
+            box-shadow: 0 0 10px rgba(100, 255, 218, 0.3);
+        }
+
+        .terminal-left {
+            left: 20px;
+        }
+
+        .terminal-right {
+            right: 20px;
+        }
+
+        .terminal-header {
+            border-bottom: 1px solid #64ffda;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+            font-size: 0.9em;
+        }
+
+        .terminal-content {
+            font-size: 0.8em;
+            line-height: 1.6;
+        }
+
+        .terminal-content ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .terminal-content li {
+            margin-bottom: 8px;
+            padding-left: 15px;
+            position: relative;
+        }
+
+        .terminal-content li::before {
+            content: ">";
+            position: absolute;
+            left: 0;
+        }
+
+        .terminal-container:hover {
+            transform: translateY(-50%) scale(1.02);
+            box-shadow: 0 0 20px rgba(100, 255, 218, 0.5);
+        }
+
+        @media (max-width: 1600px) {
+            .terminal-container {
+                display: none;
+            }
+        }
     </style>
 </head>
 <body>
@@ -334,6 +396,40 @@
                 <span class="arrow">◃</span>
             </div>
         </header>
+
+        <div class="terminal-container terminal-left">
+            <div class="terminal-header">
+                Favorite Tools
+            </div>
+            <div class="terminal-content">
+                <ul>
+                    <li>Burp Suite Professional</li>
+                    <li>Nmap</li>
+                    <li>Metasploit Framework</li>
+                    <li>Wireshark</li>
+                    <li>OWASP ZAP</li>
+                    <li>Aircrack-ng</li>
+                    <li>Hashcat</li>
+                    <li>SQLmap</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="terminal-container terminal-right">
+            <div class="terminal-header">
+                Achievements
+            </div>
+            <div class="terminal-content">
+                <ul>
+                    <li>CVE-2024-5625</li>
+                    <li>Bug Bounty: Critical SQL Injection</li>
+                    <li>Bug Bounty: RCE in Cloud Service</li>
+                    <li>CTF Winner: H4CK FOR TO CTF</li>
+                    <li>1000+ Bug Reports</li>
+                    <li>Top 100 on HackerOne</li>
+                </ul>
+            </div>
+        </div>
 
         <section id="hakkimda">
             <h2 class="section-title">Hakkımda</h2>
